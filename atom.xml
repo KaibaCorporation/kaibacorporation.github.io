@@ -10,7 +10,7 @@ layout: nil
     <id>https://kaibacorporation.github.io/</id>
     <icon>https://kaibacorporation.github.io/logo.jpg</icon>
     <author>
-        <name>Seto Kaiba</name>
+        <name>Kaiba Corporation</name>
     </author>
     {% for post in site.posts %}
     <entry>
