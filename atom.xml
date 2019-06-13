@@ -1,0 +1,24 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ site.title }}</title>
+    <link href="https://kaibacorporation.github.io/atom.xml" rel="self" />
+    <link href="https://kaibacorporation.github.io" />
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>https://kaibacorporation.github.io/</id>
+    <icon>https://kaibacorporation.github.io/logo.jpg</icon>
+    <author>
+        <name>Kaiba Corporation</name>
+    </author>
+    {% for post in site.posts %}
+    <entry>
+        <id>https://kaibacorporation.github.io{{ post.id }}</id>
+        <title>{{ post.title }}</title>
+        <link href="https://kaibacorporation.github.io{{ post.url }}" />
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+    {% endfor %}
+</feed>
